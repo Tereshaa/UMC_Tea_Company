@@ -1,0 +1,151 @@
+.demo-container {
+  height: 30rem;
+  border-radius: 0.5rem; /* Adjust for rounded corners */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonials-header {
+  margin-top: 90px;
+  margin-bottom: 50px;
+}
+
+.testimonials-header .main-title {
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+  text-align: center;
+}
+
+.testimonials-header .subtitle {
+  font-size: 1.2em;
+  color: #666;
+  text-align: center;
+}
+.scroller {
+  position: relative;
+  z-index: 20;
+  max-width: 100%;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    white 5%,
+    white 95%,
+    transparent
+  );
+}
+
+.scroller-list {
+  display: flex;
+  min-width: 100%;
+  gap: 1rem;
+  padding: 1rem 0;
+  width: max-content;
+  flex-wrap: nowrap;
+  animation: scroll var(--animation-duration) linear infinite;
+  list-style: none;
+}
+
+.scroller-list .card {
+  width: 300px;
+  height: 250px;
+  max-width: 100%;
+  border-radius: 0.75rem;
+  border: 1px solid #374151; /* Slate-700 */
+  border-bottom: 0;
+  padding: 1.5rem;
+  background: linear-gradient(
+    180deg,
+    #1e293b,
+    #0f172a
+  ); /* Slate-800 and Slate-900 */
+  position: relative;
+  flex-shrink: 0;
+}
+
+.scroller-list .card blockquote {
+  position: relative;
+  z-index: 20;
+  color: #f9fafb; /* Gray-100 */
+  font-size: 0.875rem; /* Text-sm */
+  line-height: 1.6;
+}
+
+.scroller-list .card .overlay {
+  position: absolute;
+  left: -0.5rem;
+  top: -0.5rem;
+  height: calc(100% + 1rem);
+  width: calc(100% + 1rem);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.scroller-list .card .quote {
+  color: #f9fafb; /* Gray-100 */
+}
+
+.scroller-list .card .info {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.scroller-list .card .name {
+  color: #6b7280; /* Gray-400 */
+  font-size: 0.875rem; /* Text-sm */
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.pause-on-hover:hover {
+  animation-play-state: paused;
+}
+
+@media (max-width: 500px) {
+  .testimonials-header .main-title {
+    font-size: 2rem;
+  }
+
+  .testimonials-header .subtitle {
+    font-size: 1em;
+  }
+
+  .scroller-list {
+    display: flex;
+    min-width: 100%;
+    gap: 1rem;
+    padding: 1rem 0;
+    width: max-content;
+    flex-wrap: nowrap;
+    animation: scroll var(--animation-duration) linear infinite;
+  }
+
+  .scroller-list .card {
+    width: 220px;
+    height: 220px;
+    padding: 1rem;
+  }
+
+  .scroller-list .card .quote {
+    font-size: 0.7rem;
+  }
+
+  .scroller-list .card .name {
+    font-size: 0.75rem;
+  }
+}

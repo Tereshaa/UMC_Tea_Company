@@ -1,0 +1,118 @@
+.card-demo {
+  max-width: 20rem;
+  width: 100%;
+  border-radius: 15px;
+}
+
+.card-demo.active {
+  transform: scale(1.05);
+  box-shadow: 2px 2px 10px 10px rgba(0, 0, 0, 0.5);
+  border: 1px solid black;
+}
+
+.card-demo .card {
+  position: relative;
+  height: 19rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1rem;
+  border: 2px solid transparent;
+  background-size: cover;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.card-demo.card-hover {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-size: cover;
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 0.5s;
+}
+
+.card-demo .card:hover .card-hover {
+  opacity: 1;
+}
+
+.card-demo .card:hover::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  transition: opacity 0.5s;
+}
+
+.text {
+  position: relative;
+  z-index: 3;
+}
+
+.text .title {
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: #f9fafb;
+}
+
+.text .description {
+  font-weight: normal;
+  font-size: 1rem;
+  color: #f9fafb;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .card-demo {
+    max-width: 16rem;
+  }
+
+  .card-demo .card {
+    height: 20rem;
+    padding: 0.75rem;
+  }
+
+  .text .title {
+    font-size: 1rem;
+  }
+
+  .text .description {
+    font-size: 0.875rem;
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-demo {
+    max-width: 18rem;
+  }
+
+  .card-demo .card {
+    height: 14rem;
+    padding: 0.5rem;
+  }
+
+  .text .title {
+    font-size: 0.875rem;
+  }
+
+  .text .description {
+    font-size: 0.75rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+}

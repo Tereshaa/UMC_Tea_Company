@@ -1,0 +1,120 @@
+/* Header Styles */
+.header {
+    height: 34vw; /* Relative height based on viewport width */
+    margin: 30px auto;
+    background: url('./header_img.png') no-repeat center center;
+    background-size: cover; /* Ensure the image covers the entire background */
+    position: relative;
+    border-radius: 50px;
+  }
+  
+  .header-contents {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    gap: 1.5vw;
+    bottom: 10%;
+    left: 6vw;
+    animation: fadeIn 3s;
+  }
+  
+  .header-contents h2 {
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    font-size: max(4.5vw, 22px);
+    max-width: 85%;
+  }
+  
+  .header-contents p {
+    color: rgb(255, 255, 255);
+    font-size: 1vw;
+    max-width: 38%;
+    font-weight: 500;
+  }
+  
+  .header-contents button {
+    border: none;
+    color: #747474;
+    font-weight: 500;
+    padding: 1vw 2.3vw;
+    background-color: white;
+    font-size: max(1vw, 14px);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .header-contents button:hover {
+    background-color: #f0f0f0; /* Light gray on hover */
+    color: #333; /* Darker text color on hover */
+  }
+  
+  /* Mobile Responsive Styles */
+  @media (max-width: 1050px) {
+    .header-contents {
+      left: 4vw; /* Adjust positioning for medium screens */
+      max-width: 70%; /* Increase width to fit better */
+    }
+  }
+  
+  @media (max-width: 750px) {
+    .header {
+      height: 50vw; /* Increase height for smaller screens */
+    }
+  
+    .header-contents {
+      left: 2vw; /* Adjust positioning */
+      top: 2vw; /* Move content to top */
+      max-width: 85%; /* Full width for small screens */
+      gap: 1vw; /* Reduce gap */
+      bottom: auto; /* Remove bottom positioning */
+      align-items: flex-start; /* Ensure items are aligned to the left */
+    }
+  
+    .header-contents h2 {
+      font-size: 5vw; /* Responsive font size */
+      max-width: 100%; /* Full width */
+      text-align: left; /* Align text to the left */
+    }
+  
+    .header-contents p {
+      font-size: 3vw; /* Responsive font size */
+      max-width: 100%; /* Full width */
+      text-align: left; /* Align text to the left */
+      display: block; /* Ensure it's displayed */
+    }
+  
+    .header-contents button {
+      font-size: 3vw; /* Responsive font size */
+      padding: 2vw 4vw; /* Responsive padding */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .header {
+      height: 120vw; 
+      border-radius: 25px;
+    }
+  
+    .header-contents {
+      left: 5vw; /* Adjust positioning */
+      top: 4vw; /* Move content to top */
+      max-width: 95%; /* Full width */
+    }
+  
+    .header-contents h2 {
+      font-size: 9vw; /* Responsive font size for very small screens */
+    }
+  
+    .header-contents p {
+      display: none;/* Responsive font size */
+    }
+  
+    .header-contents button {
+      font-size: 4vw; /* Responsive font size */
+      margin-top: 15px;
+      padding: 3vw 6vw; /* Responsive padding */
+    }
+  }
+  
