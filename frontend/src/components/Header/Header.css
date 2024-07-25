@@ -2,7 +2,7 @@
 .header {
     height: 34vw; /* Relative height based on viewport width */
     margin: 30px auto;
-    background: url('./header_img.png') no-repeat center center;
+    background: url('header_img.png') no-repeat center center;
     background-size: cover; /* Ensure the image covers the entire background */
     position: relative;
     border-radius: 50px;
