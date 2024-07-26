@@ -11,6 +11,11 @@
   padding-top: 50px;
 }
 
+footer a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .footer-content {
   width: 100%;
   display: grid;
