@@ -13,7 +13,7 @@ const MenuCards = ({ category, setCategory }) => {
   };
 
   return (
-    <div className="menu-cards-container">
+    <div id="explore-menu" className="menu-cards-container">
       <div className="menu-cards-heading">
         <h1 className="main-head">Explore Our Menu</h1>
         <h2 className="subtitle">Find your favorite items from our diverse selection</h2>
