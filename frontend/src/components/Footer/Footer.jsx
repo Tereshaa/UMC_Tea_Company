@@ -17,9 +17,9 @@ const Footer = () => {
         <div className="footer-content-center">
           <h2>COMPANY</h2>
           <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Delivery</li>
+            <li id="/">Home</li>
+            <li >About</li>
+            <li id="explore-menu">Menu</li>
             <li>Privacy Policy</li>
           </ul>
         </div>
